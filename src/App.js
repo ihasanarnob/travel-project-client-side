@@ -1,23 +1,43 @@
-import logo from './logo.svg';
+
+import { BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import './App.css';
+import AuthProvider from './contexts/AuthProvider';
+import Error404 from './Pages/Error404/Error404';
+import Home from './Pages/Home/Home/Home';
+import Trekking from './Pages/Home/Trekking/Trekking';
+import Login from './Pages/Login/Login/Login';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Footer from './Shared/Footer/Footer';
+import Header from './Shared/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+      <Router>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <PrivateRoute path="/trekking">
+            <Trekking></Trekking>
+          </PrivateRoute>
+
+
+          <Route path="*">
+            <Error404></Error404>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </Router>
+      </AuthProvider>
     </div>
   );
 }
