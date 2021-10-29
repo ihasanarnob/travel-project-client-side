@@ -9,7 +9,7 @@ const Booking = () => {
     const {id} = useParams();
     const [info,setInfo] = useState({});
     useEffect(() => {
-        fetch('http://localhost:5000/treks')
+        fetch('https://fathomless-cove-88059.herokuapp.com/treks')
         .then(res => res.json())
         .then(data => {
             const matchedInfo = data?.find(singleInfo=> singleInfo._id == id)

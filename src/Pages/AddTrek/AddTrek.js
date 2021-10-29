@@ -7,7 +7,7 @@ const AddTrek = () => {
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('http://localhost:5000/treks',{
+        fetch('https://fathomless-cove-88059.herokuapp.com/treks',{
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(data)

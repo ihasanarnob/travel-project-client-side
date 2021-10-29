@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Trekking = () => {
     const [events,setEvents] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/treks')
+        fetch('https://fathomless-cove-88059.herokuapp.com/treks')
         .then(res => res.json())
         .then(data => setEvents(data));
     },[])
