@@ -1,0 +1,14 @@
+.addEvent form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addEvent form input,
+textarea {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}

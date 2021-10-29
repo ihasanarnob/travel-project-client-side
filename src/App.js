@@ -2,6 +2,8 @@
 import { BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import AddTrek from './Pages/AddTrek/AddTrek';
+import Booking from './Pages/Booking/Booking';
 import Error404 from './Pages/Error404/Error404';
 import Home from './Pages/Home/Home/Home';
 import Trekking from './Pages/Home/Trekking/Trekking';
@@ -26,6 +28,12 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/addtreks">
+            <AddTrek></AddTrek>
+          </Route>
+          <PrivateRoute path="/booking/:id">
+            <Booking></Booking>
+          </PrivateRoute>
           <PrivateRoute path="/trekking">
             <Trekking></Trekking>
           </PrivateRoute>
