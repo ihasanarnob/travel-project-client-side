@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Trekking = () => {
     const [events,setEvents] = useState([]);
@@ -9,14 +10,35 @@ const Trekking = () => {
         fetch('https://fathomless-cove-88059.herokuapp.com/treks')
         .then(res => res.json())
         .then(data => setEvents(data));
-    },[])
+    },[]);
+
+    const {user} = useAuth();
+
+    const handleBooking = (index) => {
+        const data = events[index];
+
+        data.email = user.email;
+        console.log(data);
+
+        fetch("http://localhost:5000/addBookings", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            console.log(result);
+          });
+      };
+
+
     return (
         <div>
             <h2>Popular Treks { events.length } </h2>
             <div className="row row-cols-1 row-cols-md-3 g-4 ">
 
                 {
-                    events.map(event =>  <div className="col">
+                    events.map((event,index) =>  <div className="col">
                     <div className="card">
                     <img src={event.imageUrl} className="card-img-top" alt="..."/>
                     <div className="card-body">
@@ -25,8 +47,8 @@ const Trekking = () => {
                         <h6 className="card-text">{event.price}</h6>
                     </div>
                     <div className="card-footer">
-                        <Link to = {`/booking/${event._id}`}>
-                        <button className="btn btn-primary">Proceed Booking</button>
+                        <Link to ="/booking" >
+                        <button onClick={()=>handleBooking(index)} className="btn btn-primary">Proceed Booking</button>
                         </Link>
                     </div>
                     </div>

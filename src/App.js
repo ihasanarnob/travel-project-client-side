@@ -31,6 +31,9 @@ function App() {
           <Route path="/addtreks">
             <AddTrek></AddTrek>
           </Route>
+          <Route path="/booking">
+            <Booking></Booking>
+          </Route>
           <PrivateRoute path="/booking/:id">
             <Booking></Booking>
           </PrivateRoute>

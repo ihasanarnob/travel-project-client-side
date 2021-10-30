@@ -1,35 +1,33 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { useParams } from 'react-router';
+import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 
 const Booking = () => {
+    const [orders, setOrders] = useState([]);
     const {user} = useAuth();
-    const {id} = useParams();
-    const [info,setInfo] = useState({});
-    useEffect(() => {
-        fetch('https://fathomless-cove-88059.herokuapp.com/treks')
-        .then(res => res.json())
-        .then(data => {
-            const matchedInfo = data?.find(singleInfo=> singleInfo._id == id)
-            setInfo(matchedInfo);
-        })
-    },[id]);
-    return (
-        <div>
-            <h4>Hello {user.displayName} </h4>
-            <h3> {user.email} </h3>
 
-            <h3>This is booking id : {id}</h3>
-            
-            <div className="card mb-3">
-            <img src={info.imageUrl} className="card-img-top" alt="..."/>
-            <div className="card-body">
-                <h5 className="card-title">{info.name}</h5>
-                <p className="card-text">{info.description}</p>
-                <h6 className="card-text"> Starts From ${info.price} </h6>
-            </div>
+  const email = user.email;
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/myBookings/${email}`)
+      .then((res) => res.json())
+      .then((data) =>setOrders(data));
+  }, [email]);
+  console.log(orders);
+    return (
+        <div className="container">
+            <h5> User Info : {user.displayName}  Logging email: {user.email} </h5>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+            {
+                orders.map(order=> <div className="col">
+                <div className="card">
+                  <img src={order.imageUrl} className="card-img-top" alt="..."/>
+                  <div className="card-body">
+                    <h5 className="card-title">{order.name}</h5>
+                    <p className="card-text"> {order.description} </p>
+                  </div>
+                </div>
+              </div> )
+            }
             </div>
         </div>
     );

@@ -1,9 +1,10 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div>
-            <h3>this is footer</h3>
+        <div className="footer">
+            <h6>COPYRIGHT HIKE HEAVEN. ALL RIGHT RESERVED  TERMS AND CONDITIONS  |  LINK EXCHANGE </h6>
         </div>
     );
 };

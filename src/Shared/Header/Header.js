@@ -9,11 +9,12 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
-                    <Navbar.Brand>BackPack.com</Navbar.Brand>
+                    <Navbar.Brand>Hike Heaven </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/trekking">Trekking</Nav.Link>
+                        <Nav.Link as={Link} to="/booking">Booking</Nav.Link>
                         <Nav.Link as={Link} to="/addtreks">Add A New Trek Place</Nav.Link>
                         {user?.email ?
                             <Button onClick={logOut} variant="light">Logout</Button> :
