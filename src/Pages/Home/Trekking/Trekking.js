@@ -18,7 +18,6 @@ const Trekking = () => {
         const data = events[index];
 
         data.email = user.email;
-        console.log(data);
 
         fetch("http://localhost:5000/addBookings", {
           method: "POST",
@@ -27,7 +26,10 @@ const Trekking = () => {
         })
           .then((res) => res.json())
           .then((result) => {
-            console.log(result);
+            console.log(result.insertedId);
+            if (result.insertedId) {
+                alert('already added')
+            }
           });
       };
 

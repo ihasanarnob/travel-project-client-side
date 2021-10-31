@@ -29,13 +29,10 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/addtreks">
+          <PrivateRoute path="/addtreks">
             <AddTrek></AddTrek>
-          </Route>
-          <Route path="/booking">
-            <Booking></Booking>
-          </Route>
-          <PrivateRoute path="/booking/:id">
+          </PrivateRoute>
+          <PrivateRoute path="/booking">
             <Booking></Booking>
           </PrivateRoute>
           <Route path="/trekking">
