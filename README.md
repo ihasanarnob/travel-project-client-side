@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Hike Heaven
 
-This project was bootstrapped with [Hike Heaven](https://nepal-trek-assignment.web.app/).
+Website Live Link attached [Hike Heaven](https://nepal-trek-assignment.web.app/).
 
-## Available Scripts
+- Discussion
 
-In the project directory, you can run:
+  - Given the fact that tourism industry is one of the biggest industries in Nepal; there are many travels available for you to choose from. Among all of them, you might be wondering why you should choose Hike Heaven, right?
 
-### `npm start`
+- About Us
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - Hike Heaven provides you with varieties of trekking and travel packages. Our guides are very professional and friendly. The reviews we have from our clients speak for our goodness.
+    We provide trekking packages such as Everest trekking, Annapurna trekking, Manaslu trekking, Langtang trekking and many more. We also provide city tours, cycling, varieties of one-day hiking and the like. We are famous for outstanding customer services thanks to our friendly guides. Some of our one-day hiking packages include places like Nagarjuna hill, Sankhu Nagarkot, Chandragiri Hill, Chandragiri Hill, Fulchoki Kathmandu etc. We also provide short tour packages of two nights and three days, a;ong which Chisapani- Nagarkot, Namobuddha- Dhulikhel etc. Our other services include rafting, kayaking, jungle safari, paragliding, mountain flight, bungee jumping and the list goes on and on. In addition to all of these external services, we never fail to delight our customers.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Tailor made treks
 
-### `npm test`
+  - Our itinerary has been carefully formulated in order to give you the best experience in a short period of time. However, if you wish to embark on a journey with your tailor made itinerary, we are ready to cater to your needs and carry out tailor made treks all across Nepal.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Customer Safety
 
-### `npm run build`
+  - While we focus on creating good memories for our customers, customer safety and security is the most important consideration we take when carrying out these endeavors. We have a team of experienced guides and climbers, the necessary training, and the necessary equipment to make your endeavors safe.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Eco-friendly trekking
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - We make it a point to ensure that all of our activities are for the benefit of the environment and does not affect the environment in any way. Our activities are carried out in accordance with the laws of the environment, and we carefully eliminate waste products that might hamper the environment.
+    Choose us, and you are surely set to return home satisfied with the services offered.

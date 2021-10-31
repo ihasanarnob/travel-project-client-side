@@ -8,7 +8,7 @@ const Booking = () => {
   const email = user.email;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myBookings/${email}`)
+    fetch(`https://fathomless-cove-88059.herokuapp.com/myBookings/${email}`)
       .then((res) => res.json())
       .then((data) =>setOrders(data));
         }, [email]);
@@ -18,7 +18,7 @@ const Booking = () => {
   const handleDeleteBooking = id =>{
     const deleteProceed = window.confirm('Are you sure you want to cancel your booking?')
     if (deleteProceed) {
-      const url = `http://localhost:5000/myBookings/${id}`;
+      const url = `https://fathomless-cove-88059.herokuapp.com/myBookings/${id}`;
       fetch(url,{
         method: 'DELETE',
 
@@ -28,10 +28,8 @@ const Booking = () => {
         if (data.deletedCount>0) {
           alert('Booking Cancelled!')
           const remainingOrders = orders.filter(order => order._id !== id) 
-          setOrders(remainingOrders);
-       
-     }
-
+          setOrders(remainingOrders); 
+      }
    })
       
     }
@@ -43,7 +41,10 @@ const Booking = () => {
 
     return (
         <div className="container">
-            <h5> User Info : {user.displayName}  Logging email: {user.email} </h5>
+            <div className="my-5 p-3 text-primary bg-dark">
+            <h5> User Name : {user.displayName} </h5>
+             <h5> Logging email: {user.email} </h5>
+            </div>
             <div className="row row-cols-1 row-cols-md-3 g-4">
             {
                 orders.map(order=> <div key={order._id} className="col">

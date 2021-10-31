@@ -19,7 +19,7 @@ const Trekking = () => {
 
         data.email = user.email;
 
-        fetch("http://localhost:5000/addBookings", {
+        fetch("https://fathomless-cove-88059.herokuapp.com/addBookings", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),
@@ -28,7 +28,7 @@ const Trekking = () => {
           .then((result) => {
             console.log(result.insertedId);
             if (result.insertedId) {
-                alert('already added')
+                alert('Booking Proceeded')
             }
           });
       };
