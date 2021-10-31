@@ -34,11 +34,11 @@ const Trekking = () => {
 
     return (
         <div>
-            <h2>Popular Treks { events.length } </h2>
+            <h2 className="my-5">POPULAR TREKS </h2>
             <div className="row row-cols-1 row-cols-md-3 g-4 ">
 
                 {
-                    events.map((event,index) =>  <div className="col">
+                    events.map((event,index) =>  <div key={event._id} className="col">
                     <div className="card">
                     <img src={event.imageUrl} className="card-img-top" alt="..."/>
                     <div className="card-body">

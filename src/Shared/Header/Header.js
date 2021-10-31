@@ -9,13 +9,13 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
-                    <Navbar.Brand>Hike Heaven </Navbar.Brand>
+                    <Navbar.Brand className="font-"> <h3 className="text-primary">Hike Heaven</h3> </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/trekking">Trekking</Nav.Link>
                         <Nav.Link as={Link} to="/booking">Booking</Nav.Link>
-                        <Nav.Link as={Link} to="/addtreks">Add A New Trek Place</Nav.Link>
+                        <Nav.Link as={Link} to="/manageOrders">Manage Orders</Nav.Link>
                         {user?.email ?
                             <Button onClick={logOut} variant="light">Logout</Button> :
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>}

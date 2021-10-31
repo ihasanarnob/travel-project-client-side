@@ -9,6 +9,7 @@ import Home from './Pages/Home/Home/Home';
 import Trekking from './Pages/Home/Trekking/Trekking';
 import Login from './Pages/Login/Login/Login';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import ManageOrders from './Pages/ManageOrders/ManageOrders';
 import Footer from './Shared/Footer/Footer';
 import Header from './Shared/Header/Header';
 
@@ -37,8 +38,11 @@ function App() {
           <PrivateRoute path="/booking/:id">
             <Booking></Booking>
           </PrivateRoute>
-          <PrivateRoute path="/trekking">
+          <Route path="/trekking">
             <Trekking></Trekking>
+          </Route>
+          <PrivateRoute path="/manageOrders">
+            <ManageOrders></ManageOrders>
           </PrivateRoute>
 
 
