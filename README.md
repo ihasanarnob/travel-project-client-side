@@ -22,4 +22,4 @@ Website Live Link attached [Hike Heaven](https://nepal-trek-assignment.web.app/)
 - Eco-friendly trekking
 
   - We make it a point to ensure that all of our activities are for the benefit of the environment and does not affect the environment in any way. Our activities are carried out in accordance with the laws of the environment, and we carefully eliminate waste products that might hamper the environment.
-    Choose us, and you are surely set to return home satisfied with the services offered.
+    Choose us, and you are surely set to return home satisfied with the services offered...
